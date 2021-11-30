@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Página inicial</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center">Preferências investidoras</h1>
+
+    <h4>Seu perfil foi: <%= perfil %>
+    </h4>
+
+    <div style="padding: 3% 0;">
+        <!-- Formulário para consultar a temperatura -->
+        <form action="/preferenciasInvestidoras" method="post">
+            <% if(perfil == "Perfil Moderado" || perfil == "Perfil Conservador"){ %>
+                <div id="cdb">
+                    <h4>CDB: </h4>
+
+                    <div>
+                        <label for="aplicacao_minima">Aplicação mínima</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="aplicacao_minima">R$</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Ex: 750" id="aplicacao_minima" name="cdb_aplicacao_minima">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="data_resgate">Data de resgate</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: dd/mm/YYYY" id="data_resgate" name="cdb_data_resgate">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="rentabilidade">Rentabilidade (0-100)%</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: 10" id="rentabilidade" name="cdb_rentabilidade">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="rentabilidade">%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>Risco</p>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                            name="cdb_risco">
+                            <option value=""></option>
+                            <option value="10">Até 10%</option>
+                            <option value="20">Até 20%</option>
+                            <option value="40">Até 40%</option>
+                            <option value="60">Até 60%</option>
+                            <option value="80">Até 80%</option>
+                        </select>
+                    </div> 
+                </div>
+            <% } %>
+
+            <% if(perfil == "Perfil Moderado" || perfil == "Perfil Conservador"){ %>
+                <div id="tesouro">
+                    <h4>Tesouro: </h4>
+
+                    <div>
+                        <label for="aplicacao_minima">Aplicação mínima</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="aplicacao_minima">R$</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Ex: 750"  id="aplicacao_minima" name="tesouro_aplicacao_minima">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="data_resgate">Data de resgate</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: dd/mm/YYYY" id="data_resgate" name="tesouro_data_resgate">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="rentabilidade">Rentabilidade (0-100)%</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: 13" id="rentabilidade" name="tesouro_rentabilidade">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="rentabilidade">%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>Risco</p>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                            name="tesouro_risco">
+                            <option value=""></option>
+                            <option value="10">Até 10%</option>
+                            <option value="20">Até 20%</option>
+                            <option value="40">Até 40%</option>
+                            <option value="60">Até 60%</option>
+                            <option value="80">Até 80%</option>
+                        </select>
+                    </div> 
+                </div>
+            <% } %>
+
+            <% if(perfil == "Perfil Moderado"){ %>
+                <div id="fundos">
+                    <h4>Fundos: </h4>
+
+                    <div>
+                        <label for="aplicacao_minima">Aplicação mínima</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="aplicacao_minima">R$</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Ex: 750"  id="aplicacao_minima" name="fundos_aplicacao_minima">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="rentabilidade">Rentabilidade (0-100)%</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: 13" id="rentabilidade" name="fundos_rentabilidade">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="rentabilidade">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
+            <% if(perfil == "Perfil Moderado" || perfil == "Perfil Agressivo"){ %>
+                <div id="acao">
+                    <h4>Ação: </h4>
+
+                    <div>
+                        <label for="aplicacao_minima">Aplicação mínima</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="aplicacao_minima">R$</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Ex: 750"  id="aplicacao_minima" name="acao_aplicacao_minima">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="rendimento_dividendo">Rendimento em Dividendo (0-100)%</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: 13" id="rendimento_dividendo" name="acao_rendimento_dividendo">
+                        </div>
+                    </div>
+
+                    
+                </div>
+            <% } %>
+
+            <% if(perfil == "Perfil Moderado" || perfil == "Perfil Agressivo"){ %>
+                <div id="bdr">
+                    <h4>BDR: </h4>
+
+                    <div>
+                        <label for="aplicacao_minima">Aplicação mínima</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="aplicacao_minima">R$</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Ex: 750"  id="aplicacao_minima" name="bdr_aplicacao_minima">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="rendimento_dividendo">Rendimento em Dividendo (0-100)%</label>
+                        <div class="input-group mb-3 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Ex: 13"  id="rendimento_dividendo" name="bdr_rendimento_dividendo">
+                        </div>
+                    </div>
+
+                </div>
+            <% } %>
+
+            <div>
+                <button type="submit" class="btn btn-dark"> Enviar </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
