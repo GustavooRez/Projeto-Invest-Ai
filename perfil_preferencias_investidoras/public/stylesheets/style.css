@@ -1,0 +1,27 @@
+html {
+  padding: 50px;
+}
+
+input{
+  margin-left: 2% !important;
+}
+
+button{
+  margin: 1% 0!important;
+}
+
+h1{
+  padding: 2% 0;
+}
+
+.form-control{
+  margin: 0 !important;
+}
+
+.col-sm-4{
+  padding: 0 !important;
+}
+
+#cdb, #tesouro, #acao, #fundos, #bdr{
+  padding: 2% 0;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Página inicial</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body >
+    <h1 class="text-center">Perfil Usuário</h1>
+
+    <div style="padding: 3% 0;">
+        <!-- Formulário para consultar a temperatura -->
+        <form action="/perfilUsuario" method="post">
+            
+            <div>
+                <label for="nome">Nome Completo *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="nome" name="nome">
+                </div>
+            </div>
+
+            <div>
+                <label for="data_nascimento">Data de Nascimento *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Ex: dd/mm/YYYY" id="data_nascimento" name="data_nascimento">
+                </div>
+            </div>
+
+            <div>
+                <label for="cpf">CPF *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="cpf" name="cpf">
+                </div>
+            </div>
+
+            <div>
+                <label for="rg">RG *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="rg" name="rg">
+                </div>
+            </div>
+
+            <div>
+                <label for="rua">Rua *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="rua" name="rua">
+                </div>
+            </div>
+
+            <div>
+                <label for="complemento">Complemento</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="complemento" name="complemento">
+                </div>
+            </div>
+
+            <div>
+                <label for="bairro">Bairro *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="bairro" name="bairro">
+                </div>
+            </div>
+
+            <div>
+                <label for="cidade">Cidade *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="cidade" name="cidade">
+                </div>
+            </div>
+
+            <div>
+                <label for="estado">Estado *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="estado" name="estado">
+                </div>
+            </div>
+
+            <div>
+                <label for="cep">CEP *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="cep" name="cep">
+                </div>
+            </div>
+
+            <div>
+                <label for="celular">Celular *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="celular" name="celular">
+                </div>
+            </div>
+
+            <div>
+                <label for="email">E-mail *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="text" class="form-control" id="email" name="email">
+                </div>
+            </div>
+
+            <div>
+                <label for="senha">Senha *</label>
+                <div class="input-group mb-3 col-sm-4">
+                    <input type="password" class="form-control" id="senha" name="senha">
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-dark"> Enviar </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

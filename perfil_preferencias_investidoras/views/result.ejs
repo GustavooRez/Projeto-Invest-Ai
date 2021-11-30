@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Perfil</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Botão de voltar -->
+    <form action="/" method="get">
+        <button type="submit" class="btn btn-dark"> Voltar </button>
+    </form>
+    <!-- Retorno se foi bem sucedido ou erro -->
+    <h4>O Perfil do usuário foi: <%= perfil %></h4>
+
+    <p style="font-size:1.3rem"><%= perfil_usuario['nome'] %>, suas preferências investidoras foram:</p>
+
+    <% if(perfil == "Perfil Moderado" || perfil == "Perfil Conservador"){ %>
+        <div class="py-2">
+            <h4>CDB: </h4>
+
+            <p>Aplicação Mínima: <%= preferencias['cdb_aplicacao_minima'] %> Reais</p>
+            <p>Data de resgate: <%= preferencias['cdb_data_resgate'] %></p>
+            <p>Rentabilidade: <%= preferencias['cdb_rentabilidade'] %>%</p>
+            <p>Risco: Até <%= preferencias['cdb_risco'] %>%</p>
+        </div>
+    <% } %>
+
+    <% if(perfil == "Perfil Moderado" || perfil == "Perfil Conservador"){ %>
+        <div class="py-2">
+            <h4>Tesouro: </h4>
+
+            <p>Aplicação Mínima: <%= preferencias['tesouro_aplicacao_minima'] %> Reais</p>
+            <p>Data de resgate: <%= preferencias['tesouro_data_resgate'] %></p>
+            <p>Rentabilidade: <%= preferencias['tesouro_rentabilidade'] %>%</p>
+            <p>Risco: Até <%= preferencias['tesouro_risco'] %>%</p>
+        </div>
+    <% } %>
+
+
+    <% if(perfil == "Perfil Moderado"){ %>
+        <div class="py-2">
+            <h4>Fundos: </h4>
+
+            <p>Aplicação Mínima: <%= preferencias['fundos_aplicacao_minima'] %> Reais</p>
+            <p>Rentabilidade: <%= preferencias['fundos_rentabilidade'] %>%</p>
+        </div>
+    <% } %>
+
+
+    <% if(perfil == "Perfil Moderado" || perfil == "Perfil Agressivo"){ %>
+        <div class="py-2">
+            <h4>Ação: </h4>
+
+            <p>Aplicação Mínima: <%= preferencias['acao_aplicacao_minima'] %> Reais</p>
+            <p>Rendimento em Dividendo: <%= preferencias['acao_rendimento_dividendo'] %>%</p>
+        </div>
+    <% } %>
+
+
+    <% if(perfil == "Perfil Moderado" || perfil == "Perfil Agressivo"){ %>
+        <div class="py-2">
+            <h4>CDB: </h4>
+
+            <p>Aplicação Mínima: <%= preferencias['bdr_aplicacao_minima'] %> Reais</p>
+            <p>Rendimento em Dividendo: <%= preferencias['bdr_rendimento_dividendo'] %>%</p>
+        </div>
+    <% } %>
+
+
+</body>
+</html>
