@@ -21,7 +21,6 @@ class RabbitMqService{
     }
 
     async publishInQueue(queue, message){
-        console.log("publicando na fila")
         return this.channel.sendToQueue(queue, Buffer.from(message))
     }
 
