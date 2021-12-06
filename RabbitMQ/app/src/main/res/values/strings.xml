@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">appinvest</string>
+    <string name="button_text">Definir Preferência</string>
+    <string-array name="tipo_investimento">
+        <item>cdb</item>
+        <item>tesouro</item>
+        <item>fundos imobiliarios</item>
+    </string-array>
+    <string-array name="rentabilidade">
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+        <item>100+</item>
+    </string-array>
+    <string-array name="aplicacao">
+        <item>100</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>5000</item>
+        <item>5000+</item>
+    </string-array>
+    <string-array name="periodo">
+        <item>d</item>
+        <item>1</item>
+        <item>5</item>
+        <item>5+</item>
+    </string-array>
+
+    <string-array name="preco_atual">
+        <item>65</item>
+        <item>90</item>
+        <item>125</item>
+        <item>125+</item>
+    </string-array>
+
+    <string-array name="dividendo_yuild">
+        <item>0.95</item>
+        <item>1.05</item>
+        <item>1.15</item>
+        <item>1.15+</item>
+    </string-array>
+</resources>
